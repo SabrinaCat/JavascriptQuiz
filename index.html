@@ -13,25 +13,54 @@
     <body>
         <!--Initial Jumbotron that will be hidden when user hits "start test" button-->
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 class="display-4">Welcome to my Javascript Quiz</h1>
+            <p class="lead">So you think you know Javascript? Take my quiz and find out<output></output></p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <p>This is a timed quiz! You will have 5 minutes to answer 15 questions.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
           </div>
           <!-- Alert at beginning of quiz to let user know that incorrect answers will take away time-->
           <div class="alert alert-warning" role="alert">
             A simple warning alert—check it out!
           </div>
-          <!--Click event button to show answer selected-->
-          <div class="btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="checkbox" checked> Checked
+    <!--div for the question header, form select inputs (answers), and submit button-->     
+    <div>
+        <h2> Question will go here!</h2>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
             </label>
           </div>
-        
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Second default radio
+            </label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
+            </label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Second default radio
+            </label>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Continue</button>
+    </div>      
         <script src="jsquiz.js">
 
         </script>
+     <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="https://github.com/SabrinaCat">Quiz by SabrinaCat!</a>
+      </nav>  
     </body>
 </html>
