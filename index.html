@@ -11,20 +11,20 @@
         <link rel="stylesheet" href="stylequiz.css">
     </head>
     <body>
-        <!--Initial Jumbotron that will be hidden when user hits "start test" button-->
+    <div id="wholeThing">
+        <!---Jumbotron for starting your quiz-->
         <div class="jumbotron">
-            <h1 class="display-4">Welcome to my Javascript Quiz</h1>
-            <p class="lead">So you think you know Javascript? Take my quiz and find out<output></output></p>
+            <h1 class="display-4">Welcome!</h1>
+            <p class="lead">So you think you know Javascript? Well here is a quiz to prove your knowledge!</p>
             <hr class="my-4">
-            <p>This is a timed quiz! You will have 5 minutes to answer 15 questions.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
+            <p>You will answer 10 questions in 2 minutes! Your score will be calculated by how much time you have left! 
+                Beware: any wrong answers will cut 10 seconds off your time</p>
+            <a id ="startQuiz" class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
           </div>
-          <!-- Alert at beginning of quiz to let user know that incorrect answers will take away time-->
-          <div class="alert alert-warning" role="alert">
-            A simple warning alert—check it out!
-          </div>
+        <!--buttons for answers maybe? check which form portion usese the dot slelector and change it to button-->
+        <button type="button" class="btn btn-secondary">Secondary</button>
     <!--div for the question header, form select inputs (answers), and submit button-->     
-    <div>
+    <div id="questionBox">
         <h2> Question will go here!</h2>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -55,12 +55,16 @@
           </div>
           <br>
           <button type="submit" class="btn btn-primary">Continue</button>
-    </div>      
+    </div> 
+</div>     
         <script src="jsquiz.js">
 
         </script>
-     <nav class="navbar navbar-light bg-light">
+<footer id="footer" >
+        <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="https://github.com/SabrinaCat">Quiz by SabrinaCat!</a>
-      </nav>  
+        </nav>
+</footer>  
+
     </body>
 </html>

@@ -1,3 +1,28 @@
+#wholeThing {
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.jumbotron {
+    text-align: center;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right:10%;
+    z-index: 2;
+}
+#questionBox {
+    text-align: center;
+    display: none;
+    margin-left:10%;
+    margin-right: 10%;
+    z-index: 1;
+}
+#footer {
+text-align: center;
+position: fixed;
+bottom: 0px;
+}
+    
 
 
 /* Small devices (landscape phones, 576px and up)
