@@ -6,55 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="stylequiz.css">
     </head>
     <body>
     <div id="wholeThing">
         <!---Jumbotron for starting your quiz-->
-        <div class="jumbotron">
+        <div id="frontPage" class="jumbotron">
             <h1 class="display-4">Welcome!</h1>
             <p class="lead">So you think you know Javascript? Well here is a quiz to prove your knowledge!</p>
             <hr class="my-4">
             <p>You will answer 10 questions in 2 minutes! Your score will be calculated by how much time you have left! 
                 Beware: any wrong answers will cut 10 seconds off your time</p>
-            <a id ="startQuiz" class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a id ="startQuiz" class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
           </div>
         <!--buttons for answers maybe? check which form portion usese the dot slelector and change it to button-->
         <button type="button" class="btn btn-secondary">Secondary</button>
     <!--div for the question header, form select inputs (answers), and submit button-->     
     <div id="questionBox">
         <h2> Question will go here!</h2>
+    
+        <container>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
             <label class="form-check-label" for="exampleRadios1">
-              Default radio
+              Answer 1
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
             <label class="form-check-label" for="exampleRadios2">
-              Second default radio
+              Answer 2
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
             <label class="form-check-label" for="exampleRadios1">
-              Default radio
+              Answer 3
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
             <label class="form-check-label" for="exampleRadios2">
-              Second default radio
+              Answer 4
             </label>
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Continue</button>
+          <button type="submit" class="btn btn-primary">Continue</button> 
+        </container> 
     </div> 
 </div>     
         <script src="jsquiz.js">
