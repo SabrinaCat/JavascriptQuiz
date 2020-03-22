@@ -1,7 +1,7 @@
 var quizStart = document.querySelector('#startQuiz');
 var jumbotron = document.querySelector('#frontPage');
 var questionBox = document.querySelector('#questionBox');
-var answerInputs = document.querySelector('form-check-label');
+var answerInputs = document.querySelectorAll('form-check-label');
 var questionInputs = document.getElementById ('qSection');
 var continueButton = document.getElementById('nextQ');
 var questionKey = [ ]
