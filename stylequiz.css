@@ -10,6 +10,14 @@
     margin-right:10%;
     z-index: 2;
 }
+
+#timer {
+    border-style: double;
+    border-color: red;
+    flex: initial;
+    padding: 20px;
+    margin: 15px;
+}
 #questionBox {
     text-align: center;
     display: none;
