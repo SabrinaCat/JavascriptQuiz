@@ -6,6 +6,8 @@ var answerInputs = document.querySelectorAll('form-check-label');
 var questionInputs = document.getElementById ('qSection');
 var continueButton = document.getElementById('nextQ');
 var timerText = document.getElementById('timer');
+var secondsLeft = 120;
+var timerId ;
 
 var theGoods = [
     {title: "Which built-in loop method calls a function for each element in the array?",
@@ -51,21 +53,16 @@ var theGoods = [
 //var questionKey = [ ]
 //var answerKey = [a1== true];[a3== true]
 
-function startQuiz() {
-    var timerInterval = setInterval(function() {
-    var secondsLeft= 120;
-      timerText.textContent = secondsLeft + " seconds left!";
-  
-      if(secondsLeft === 0) {
-        startDisplay== true;
-        clearInterval(timerInterval);
-        
-      }
-  
-    }, 1000);
-  };
+
+
+
+
 
 //define function
+
+
+ 
+
 function flipThrough () {
     for ( i =0; i< theGoods.length; i++) {
         questionInputs.textContent = theGoods[i].title;
@@ -80,14 +77,29 @@ function startDisplay () {
     return (startDisplay== true);
 }};
 
-startButton.addEventListener('click', function() {
-  if (startDisplay == true); {
-      jumbotron.style.display = 'none';
-      questionBox.style.display = 'block';
-      startQuiz ();
-     }
-});
-continueButton.addEventListener('click', function() {
-        flipThrough();
-});
 
+
+function startQuiz () {
+    var computerSec = 1000;
+
+     timerId = setInterval(function(){
+
+        secondsLeft -= 1;
+        timerText.textContent = secondsLeft + " seconds left!";
+        console.log( secondsLeft);
+        if(secondsLeft <= 0) {
+            clearInterval(timerId)
+        } 
+    }, computerSec);   
+};
+
+startButton.addEventListener('click', function() {
+    if (startDisplay == true); {
+        jumbotron.style.display = 'none';
+        questionBox.style.display = 'block';
+        startQuiz ();
+       }
+  });
+  continueButton.addEventListener('click', function() {
+          flipThrough();
+  });
