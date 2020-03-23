@@ -1,58 +1,93 @@
-var quizStart = document.querySelector('#startQuiz');
+
+var startButton = document.querySelector('#startQuiz');
 var jumbotron = document.querySelector('#frontPage');
 var questionBox = document.querySelector('#questionBox');
 var answerInputs = document.querySelectorAll('form-check-label');
 var questionInputs = document.getElementById ('qSection');
 var continueButton = document.getElementById('nextQ');
-var questionKey = [ ]
-var answerKey = [a1== true];[a3== true]
+var timerText = document.getElementById('timer');
 
-function submitAnswer() {
-    answerKey;
-    var i = 0, len = answerKey.length;
-    var checked = false;
-    var userAnswer =[]
-    for(i=0; i < answerKey.length; i++ ) {
-        if(answerKey[i].checked) {
-          checked = true;
-          userAnswer = answers[i].value;
-        }
-     } 
-     // if user click submit button without selecting any option, alert box will say "please select choice answer".
-     if(!checked) {
-       alert("please select choice answer");
-       return;
-     }
-     // Correct answer
-     if(userAnswer === "Scripting") {
-        alert("Answer is correct!");
-     }
-     // incorrect answer
-     else {
-        alert("Answer is wrong!");
-     }}
+var theGoods = [
+    {title: "Which built-in loop method calls a function for each element in the array?",
+    choices: ["while()", "for()", "forEach()", "none of the above"],
+    answer: "forEach loop" == true,
+},
+    {title: "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
+    choices: ["getIndex()","location()","indexOf()","None of the above"],
+    answer: "indexof()" == true,
+},
+    {title: "Which built-in method returns the length of the string?",
+    choices: ["length()","size()","index()","none of the above"],
+    answer: "length" == true,
+},
+    {title: "Which built-in method reverses the order of the elements of an array?",
+    choices: ["changeOrder(order)","reverse()","sort(order)","None of the above"],
+    answer: "reverse()",
+},
+    {title: "Which built-in method returns the characters in a string beginning at the specified location?",
+    choices: ["substr()","getSubstring()","slice()", "None of the above"],
+    answer: "substr()",
+},
+    {title: "Which built-in method returns the calling string value converted to lower case?",
+    choices: ["toLowerCase", "toLower", "changeCase(case)", "none of the above"],
+    answer: "toLowerCase",
+},
+    {title: "Which of the following function of Number object formats a number with a specific number of digits to the right of the decimal?",
+    choices: ["toExponential()", "toFixed()", "toPrecision()", "toLocaleString()"],
+    answer:"toFixed()",
+},
+    {title: "Which of the following function of Number object defines how many total digits to display of a number?",
+    choices: ["toExponential()", "toFixed()","toLocaleString()","toPrecision()"],
+    answer: "toPrecision()",
+},
+    {title: "Which of the following function of String object returns the character at the specified index?",
+    choices: [ "charAt()", "charCodeAt()", "concat()", "indexOf()"],
+    answer: "charAt()",
+},
+    {title:"Which of the following function of String object combines the text of two strings and returns a new string?",
+    choices: ["add()", "merge()", "concat()", "append()"],
+    answer: "concat()",
+}];
+//var questionKey = [ ]
+//var answerKey = [a1== true];[a3== true]
 
+function startQuiz() {
+    var timerInterval = setInterval(function() {
+    var secondsLeft= 120;
+      timerText.textContent = secondsLeft + " seconds left!";
+  
+      if(secondsLeft === 0) {
+        startDisplay== true;
+        clearInterval(timerInterval);
+        
+      }
+  
+    }, 1000);
+  };
 
 //define function
-function startDisplay () {
- if (jumbotron.style.display = 'block', questionBox.style.display = 'none') {
- return (startDisplay== true);
-  }}
+function flipThrough () {
+    for ( i =0; i< theGoods.length; i++) {
+        questionInputs.textContent = theGoods[i].title;
+    };
+    for ( i =0; i< theGoods.length; i++) {
+        answerInputs.textContent = theGoods[i].choices;
+    };
+};
 
-quizStart.addEventListener('click', function() {
+function startDisplay () {
+    if (jumbotron.style.display = 'block', questionBox.style.display = 'none') {
+    return (startDisplay== true);
+}};
+
+startButton.addEventListener('click', function() {
   if (startDisplay == true); {
       jumbotron.style.display = 'none';
       questionBox.style.display = 'block';
+      startQuiz ();
      }
 });
-
-function nextQuestion () {
-    for (questionKey=1; i> questionKey.length; i++)
-    return submitAnswer;
-}
 continueButton.addEventListener('click', function() {
-//loop through questions but it will start at index 1 because question 1 already has appeared
-if ('click') {
-    nextQuestion;
-}
+        flipThrough();
 });
+

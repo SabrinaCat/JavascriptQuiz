@@ -1,3 +1,5 @@
+
+export default "theGoods = []";
 questionArray = [
     "Q 1 - Which built-in method calls a function for each element in the array?",
     "Q 2 - Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
@@ -9,20 +11,20 @@ questionArray = [
     "Q 17 - Which of the following function of Number object defines how many total digits to display of a number?",
     "Q 23 - Which of the following function of String object returns the character at the specified index?",
     "Q 25 - Which of the following function of String object combines the text of two strings and returns a new string?",
-]
+];
 	
 var theGoods = [
     {title: "Which built-in loop method calls a function for each element in the array?",
     choices: ["while()", "for()", "forEach()", "none of the above"],
-    answer: "forEach loop",
+    answer: "forEach loop" == true,
 },
     {title: "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
     choices: ["getIndex()","location()","indexOf()","None of the above"],
-    answer: "indexof()",
+    answer: "indexof()" == true,
 },
     {title: "Which built-in method returns the length of the string?",
     choices: ["length()","size()","index()","none of the above"],
-    answer: "length",
+    answer: "length" == true,
 },
     {title: "Which built-in method reverses the order of the elements of an array?",
     choices: ["changeOrder(order)","reverse()","sort(order)","None of the above"],
@@ -51,4 +53,4 @@ var theGoods = [
     {title:"Which of the following function of String object combines the text of two strings and returns a new string?",
     choices: ["add()", "merge()", "concat()", "append()"],
     answer: "concat()",
-}]
+}];
