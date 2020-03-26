@@ -11,39 +11,40 @@ var timerText = document.getElementById('timer');
 var secondsLeft = 120;
 var timerId ;
 
+var currentQIndex = 0;
 
  
 function getQuestion() {
+    var currentQuestion = theGoods[currentQIndex];
     
-    var i = 0;
     // get the question/answer object from your questions array based on the current question index
     for ( i=0; i< theGoods.length; i++) {
         let j = i
-        for( j=0; j< theGoods[i].title.length; j++){
-    // update the DOM with the current question
+        
+    };
+    // for( j=0; j< currentQuestion.title[j].length; j++){
     
-    document.querySelector("#qSection").innerHTML= theGoods.title[j]
+    // update the DOM with the current question
+    document.querySelector("#qSection").innerHTML= currentQuestion[''].title[j]
+   
     // update the DOM with the current answer choices
     document.querySelectorAll("#form-check-label").innerHTML= theGoods.title[j].choices['']
-        };};
-    
-   
- 
-      
-        // creates a button
-         var button = document.createElement("BUTTON");
+         
+        // // creates a button
+          var button = document.createElement("BUTTON");
 
-        // set a class attribute of "choice"
+        // // set a class attribute of "choice"
          button.setAttribute("class", "choice");
 
-        // set a value attribute of choice
+        // // set a value attribute of choice
          button.setAttribute( value = "Choice1");
 
-        // set text content of button to be choice
+        // // set text content of button to be choice
         button.textContent = "Choice Options"
-        // append button to the DOM
-        
+        // // append button to the DOM
         document.body.appendChild(button);
+
+        currentQIndex ++
     };
    
  
