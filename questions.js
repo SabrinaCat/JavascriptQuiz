@@ -1,5 +1,5 @@
 
-     var theGoods= [
+     var qArray= [
         {
             title: "Which built-in loop method calls a function for each element in the array?",
             choices: ["while()", "for()", "forEach()", "none of the above"],
