@@ -1,51 +1,59 @@
-
-//var theGoods = questions.js.object
 const startButton = document.querySelector('#startQuiz');
 const jumbotron = document.querySelector('#frontPage');
 const questionBox = document.querySelector('#questionBox');
-var questionInputs = document.getElementById ('qSection');
-var answerInputs = document.querySelectorAll('form-check-label');
-var continueButton = document.getElementById('nextQ');
-var start = true;
+//variable for question and answer arrays
+let questionInputs = document.getElementById ('qSection');
+let choice1 =document.getElementById('#a1')
+let choice2 =document.getElementById('#a2')
+let choice3 =document.getElementById('#a3')
+let choice4 =document.getElementById('#a4')
+const continueButton = document.getElementById('nextQ');
+let start = true;
+//timer variables
 var timerText = document.getElementById('timer');
 var secondsLeft = 120;
 var timerId ;
 
-var currentQIndex = 0;
 
+let i= 0
  
-function getQuestion() {
-    var currentQuestion = theGoods[currentQIndex];
-    
-    // get the question/answer object from your questions array based on the current question index
-    for ( i=0; i< theGoods.length; i++) {
-        let j = i
-        
-    };
-    // for( j=0; j< currentQuestion.title[j].length; j++){
+function get1stQuestion() {
+    // update the DOM with the current question
+    document.querySelector("#qSection").innerHTML= questionsArray[i]
+    // update the DOM with the current answer choices
+    document.getElementById("a1").innerHTML= aChoiceArray[i]
+    document.getElementById("a2").innerHTML= bChoiceArray[i]
+    document.getElementById("a3").innerHTML= cChoiceArray[i]
+    document.getElementById("a4").innerHTML= dChoiceArray[i]
+    i++
+};
+
+function getNextQuestion () {
     
     // update the DOM with the current question
-    document.querySelector("#qSection").innerHTML= currentQuestion[''].title[j]
-   
+    document.querySelector("#qSection").innerHTML= questionsArray[i]
     // update the DOM with the current answer choices
-    document.querySelectorAll("#form-check-label").innerHTML= theGoods.title[j].choices['']
-         
-        // // creates a button
-          var button = document.createElement("BUTTON");
+    document.getElementById("a1").innerHTML= aChoiceArray[i]
+    document.getElementById("a2").innerHTML= bChoiceArray[i]
+    document.getElementById("a3").innerHTML= cChoiceArray[i]
+    document.getElementById("a4").innerHTML= dChoiceArray[i]
+    i++
+    if (i<= questionsArray.length){
+    //go to score page
+    }
+}
 
-        // // set a class attribute of "choice"
-         button.setAttribute("class", "choice");
-
-        // // set a value attribute of choice
-         button.setAttribute( value = "Choice1");
-
-        // // set text content of button to be choice
-        button.textContent = "Choice Options"
-        // // append button to the DOM
-        document.body.appendChild(button);
-
-        currentQIndex ++
-    };
+function calculateScore() {
+    // Compare answers
+    if ((answer === true && questions[i].aChoiceArray === ) {
+        // Increase score
+        score++;
+        alert("Correct!");
+      }
+      else {
+        alert("Wrong!");
+      } 
+}
    
  
 
@@ -76,11 +84,12 @@ startButton.addEventListener('click', function() {
         jumbotron.style.display = 'none';
         questionBox.style.display = 'block';
         countdown ();
-        getQuestion ();
+        get1stQuestion ();
        }
 });
 
-  continueButton.addEventListener('click', function () {
-    getQuestion ();
+continueButton.addEventListener('click', function(event) {
+event.preventDefault()
+getNextQuestion()
     
 });

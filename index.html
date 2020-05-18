@@ -8,6 +8,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="stylequiz.css">
      
     </head>
@@ -35,31 +36,31 @@
         <!--Will run javascript to change the text in qSection-->
         <h2 id="qSection"> Question will go here!</h2>
         <!--Seperate container to format form-checks to align left-->
-        <container>
+        <container id="answerBox">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label id="a1" class="form-check-label" for="exampleRadios1">
+            <label id="a1" class="answers form-check-label" for="exampleRadios1">
               Answer 1
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label id="a2" class="form-check-label" for="exampleRadios2">
+            <label id="a2" class="answers form-check-label" for="exampleRadios2">
               Answer 2
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label id="a3" class="form-check-label" for="exampleRadios1">
+            <label id="a3" class="answers form-check-label" for="exampleRadios1">
               Answer 3
             </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label id="a4" class="form-check-label" for="exampleRadios2">
+            <label id="a4" class="answers form-check-label" for="exampleRadios2">
               Answer 4
             </label>
           </div>
@@ -68,9 +69,10 @@
         </container> 
     </div> 
 </div>     
+
+<script src="jsquiz.js" defer></script>
+<script src ="questions.js"></script>
         
-        <script src="jsquiz.js" defer></script>
-        <script src ="questions.js"></script>
 <footer id="footer" >
         <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="https://github.com/SabrinaCat">Quiz by SabrinaCat!</a>
